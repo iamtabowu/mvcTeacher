@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "CreateTeacher";
+}
+
+<h2>CreateTeacher</h2>
+<br />
+
+<form method="post" action="/Home/CreateTeacher">
+    <div class="form-group row">
+        <label for="inputCharName" class="col-sm-2">老師編號</label>
+        <div class="col-sm-10">
+            <input type="text" id="inputTId" name="TId" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputCardName" class="col-sm-2">老師名稱</label>
+        <div class="col-sm-10">
+            <input type="text" id="inputTName" name="Tname" class="form-control" />
+        </div>
+    </div>
+    <input class="btn btn-default" type="submit" value="新增" />
+</form>

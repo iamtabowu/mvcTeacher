@@ -1,0 +1,33 @@
+﻿@using WebApplication4.Models;
+
+@{
+    List<Teacher> teachers = ViewBag.teacher;
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>老師編號</th>
+            <th>老師名稱</th>           
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            foreach (Teacher teacher in teachers)
+            {
+                <tr>
+                    <th>@teacher.TId</th>
+                    <th>@teacher.Tname</th>
+                    <th>@Html.ActionLink("編輯","EditTeacher",new { id = teacher.TId})</th>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("新增資料","CreateTeacher")
+
+</p>
